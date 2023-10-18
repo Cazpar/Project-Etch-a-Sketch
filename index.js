@@ -25,3 +25,16 @@ slider.addEventListener('change', () => {
     // update label
     label.textContent = `Grid Size: ${myGrid.size}`;
 });
+
+//show colorpicker if #brush2 is selected
+const brush2 = document.querySelector('#brush2');
+const colorPicker = document.querySelector('.color-picker');
+brush2.addEventListener('click', () => {
+    colorPicker.style.display = 'block';
+});
+
+//update color on colorpicker change
+const colorPickerInput = document.querySelector('#colorPicker');
+colorPickerInput.addEventListener('change', () => {
+    myGrid.setCellColor(colorPickerInput.value);
+});

@@ -6,6 +6,7 @@ class Grid {
         this.container = document.querySelector('.game-container');
         this.gridWidth = this.container.clientWidth;
         this.gridHeight = this.container.clientHeight;
+        this.cellColor = 'black';
     }
 
     // construct grid based on size into div.game-grid
@@ -54,9 +55,18 @@ class Grid {
         const cells = document.querySelectorAll('.cell');
         cells.forEach(cell => {
             cell.addEventListener('mouseover', (e) => {
-                e.target.style.backgroundColor = 'black';
+                e.target.style.backgroundColor = this.cellColor;
             });
         });
+    }
+
+    setCellColor(color) {
+        console.log(color);
+        this.cellColor = color;
+    }
+
+    getCellColor() {
+        return this.cellColor;
     }
 }
 
