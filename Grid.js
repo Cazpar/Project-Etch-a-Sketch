@@ -61,7 +61,6 @@ class Grid {
     }
 
     setCellColor(color) {
-        console.log(color);
         this.cellColor = color;
     }
 
