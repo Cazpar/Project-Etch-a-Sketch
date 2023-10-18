@@ -8,7 +8,6 @@ myGrid.createGrid();
 const label = document.querySelector('.game-size-label');
 label.textContent = `Grid Size: ${myGrid.size}`;
 
-
 // clear grid
 const clearButton = document.querySelector('.reset-button');
 clearButton.addEventListener('click', () => {
@@ -25,8 +24,6 @@ slider.addEventListener('change', () => {
     // update label
     label.textContent = `Grid Size: ${myGrid.size}`;
 });
-
-
 
 //show colorpicker if #brush2 is selected
 const brush2 = document.querySelector('#brush2');

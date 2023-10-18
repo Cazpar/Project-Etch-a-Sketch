@@ -1,5 +1,74 @@
-.cell {
+/* Set default font and background color */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+/* Style the button container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.reset-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
+    font-size: 16px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.slider {
+    width: 200px;
+    margin-right: 20px;
+}
+
+.game-size-label {
+    margin-right: 20px;
+}
+
+.brush-selector {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.brush-selector label {
+    margin-right: 10px;
+}
+
+.color-picker {
+    display: none;
+    margin-right: 20px;
+}
+
+/* Style the game grid */
+.game-grid {
+    width: 70vw;
+    height: 70vh;
+    margin: 0 auto;
 }
 
 .row {
@@ -8,20 +77,22 @@
     width: 100%;
 }
 
-.game-grid {
-    width: 70dvw;
-    height: 70dvh;
-
-    box-shadow: 0 0 10px 10px #000000;
+.cell {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #ccc;
 }
 
-.game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* Style the color picker */
+.color-picker label {
+    display: block;
+    margin-bottom: 10px;
 }
 
-.color-picker {
-    display: none;
+.color-picker input[type="color"] {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 0;
+    margin: 0;
 }

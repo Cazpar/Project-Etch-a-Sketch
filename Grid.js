@@ -9,6 +9,21 @@ class Grid {
         this.cellColor = 'black';
     }
 
+    // update grid
+    updateGridSize(size) {
+        this.size = size;
+        this.clearGrid();
+        this.createGrid();
+    }
+
+    // clear grid
+    clearGrid() {
+        const gameGrid = document.querySelector('.game-grid');
+        while (gameGrid.firstChild) {
+            gameGrid.removeChild(gameGrid.firstChild);
+        }
+    }
+
     // construct grid based on size into div.game-grid
     createGrid() {
         const gameGrid = document.querySelector('.game-grid');
@@ -35,21 +50,6 @@ class Grid {
         this.hoverCell();
     }
 
-    // clear grid
-    clearGrid() {
-        const gameGrid = document.querySelector('.game-grid');
-        while (gameGrid.firstChild) {
-            gameGrid.removeChild(gameGrid.firstChild);
-        }
-    }
-
-    // update grid
-    updateGridSize(size) {
-        this.size = size;
-        this.clearGrid();
-        this.createGrid();
-    }
-
     //callable function to change color on hover
     hoverCell() {
         const cells = document.querySelectorAll('.cell');
@@ -60,6 +60,7 @@ class Grid {
         });
     }
 
+    //getter and setter for cellColor
     setCellColor(color) {
         this.cellColor = color;
     }
