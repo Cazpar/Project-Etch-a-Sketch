@@ -1,4 +1,4 @@
-import { Grid } from './grid.js';
+import { Grid } from './grid/Grid.js';
 
 // create grid
 let gameSize = 16;
