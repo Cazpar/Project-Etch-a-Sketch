@@ -26,6 +26,8 @@ slider.addEventListener('change', () => {
     label.textContent = `Grid Size: ${myGrid.size}`;
 });
 
+
+
 //show colorpicker if #brush2 is selected
 const brush2 = document.querySelector('#brush2');
 const colorPicker = document.querySelector('.color-picker');
@@ -37,4 +39,18 @@ brush2.addEventListener('click', () => {
 const colorPickerInput = document.querySelector('#colorPicker');
 colorPickerInput.addEventListener('change', () => {
     myGrid.setCellColor(colorPickerInput.value);
+});
+
+//if brush 1 is selected, change color to black
+const brush1 = document.querySelector('#brush1');
+brush1.addEventListener('click', () => {
+    myGrid.setCellColor('black');
+    colorPicker.style.display = 'none';
+});
+
+//if brush 3 is selected, change color to white
+const brush3 = document.querySelector('#brush3');
+brush3.addEventListener('click', () => {
+    myGrid.setCellColor('white');
+    colorPicker.style.display = 'none';
 });
